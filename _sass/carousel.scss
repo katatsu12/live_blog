@@ -1,5 +1,5 @@
 .carousel-scroll{
-  margin: 20px auto;
+  margin: 20px auto 0;
   max-width: 950px;
   position: relative;
 
@@ -182,6 +182,8 @@
 
 @media (max-width: 767px ) {
   .carousel-scroll {
+    &__scroller { height: 420px; }
+
     &__animate-visibility {
       padding: 15px;
       width: 250px;

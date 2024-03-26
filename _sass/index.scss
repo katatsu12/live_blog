@@ -8,17 +8,16 @@
   line-height: 1.5;
   z-index: 1;
 
-  .index-logo {
-    width: 210px;
-    margin-top: 70px;
-  }
+  .index-logo { width: 210px; }
 
   .index-header {
     position: inherit;
-    margin-bottom: 1em;
-    font-size: 2.5em;
+    margin-bottom: 45px;
+    font-size: 45px;
     z-index: 1;
   }
+
+  .header-2 { font-size: 30px; }
 
   .description {
     position: inherit;
@@ -27,7 +26,10 @@
     z-index: 1;
   }
 
-  .button { background: rgba($white, .4); }
+  .button {
+    margin-top: 100px;
+    background: rgba($white, .4);
+  }
 }
 
 .awards-img {
@@ -58,27 +60,27 @@
 .index {
   .description { font-size: 20px; }
 
+  .header-2 { font-size: 30px; }
+
   &-home {
     position: relative;
     z-index: 1;
+    padding-bottom: 80px;
 
     .button { box-shadow: $light-purple-shadow; }
+
+    .description { margin-bottom: 35px; }
   }
 
-  &-testimonials__header {
-    margin-bottom: 5vh;
-    padding: 0 2vw;
-    font-size: 1.7em;
-  }
+  &-testimonials__header.header-2 { margin-bottom: 60px; }
 
   &-technologies {
     &__container {
-      padding-top: 8vh;
+      padding-top: 100px;
       background: linear-gradient(135deg, $white, $main-lilac);
 
       .header-4  {
-        margin: 7vh 0 4vh 0;
-        padding: 0 5%;
+        margin: 55px 0 25px 0;
         font-family: 'Cera-Bold', serif;
       }
     }
@@ -106,7 +108,6 @@
     &__description {
       padding: 0 !important;
       font-family: 'Inria', serif;
-      font-size: 20px;
       text-align: justify;
     }
 
@@ -154,14 +155,15 @@
     .header-3:last-child { margin-top: 7vh; }
   }
 
-  &-services {
-    background-color: $main-lilac;
+  &-services.development__cards {
+    background: $main-lilac;
 
-    .header-3 { margin: 5vh; }
+    .header-3 { margin: 40px; }
 
-    .header-5 {
+    .header-2 {
       max-width: 65%;
-      margin: 0 auto 4vh;
+      margin: 0 auto 15px;
+      font-size: 30px;
     }
 
     .card {
@@ -183,24 +185,30 @@
   }
 
   &-about-us {
-    padding: 8vh 0;
-
     &__description {
-      margin: 4.5vh 0;
+      margin: 35px 0 50px;
       font-family: 'Inria', serif;
-      font-size: 1.2em;
-      line-height: 1.7em;
-      text-align: justify;
-      color: $white;
+      text-align: justify !important;
     }
 
     .button { box-shadow: $light-purple-shadow; }
   }
 
   &-solutions {
-    padding: 8vh 0;
     background: center/cover no-repeat url('/assets/images/index/solutions-photo.webp');
-    background-color: $light-grey;
+
+    &__holder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .header-2 {
+        max-width: 70%;
+        margin-bottom: 60px;
+      }
+
+      .description { margin-bottom: 35px; }
+    }
 
     .animate-visibility__title {
       font-family: 'Cera Regular';
@@ -209,50 +217,32 @@
 
     .purple-text { display: inline; }
 
-    .description { margin-top: 5vh; }
-
     .button { background: $main-gradient; }
   }
 }
 
-.index-solutions__holder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .header-2 { max-width: 100%; }
-
-  .index-solutions__items { margin: 7vh auto 0 auto; }
-
-  .index-solutions__button {
-    margin-top: 1vh;
-    background: $main-gradient;
-  }
-}
-
 @media (max-width: 767px) {
-  .home-page-container {
+  .home-page-container.wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 0;
-    padding-top: 10vh;
+    padding-top: 65px;
     top: 0;
 
     .index-header {
       margin: 0 0 1em .5em;
-      font-size: 1.5em;
+      font-size: 20px;
       order: 2;
     }
 
     .index-logo {
-      width: 8em;
+      width: 110px;
       margin: 1.5em 2.5em;
       order: 1;
     }
 
     .header-2 {
-      font-size: 1em;
+      font-size: 15px;
       order: 3;
       margin: 0;
     }
@@ -290,18 +280,20 @@
   }
 
   .index {
-    .description { font-size: 14px; }
+    .description { font-size: 12px; }
+
+    .header-2 {
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
 
     &-home {
-      .index-testimonials__header { padding: 0 10px; }
-
-      .description.with-padding {
-        font-size: .75em;
+      .description {
         text-align: justify;
         text-align-last: center;
       }
 
-      .button { margin-top: 3em; }
+      .button { margin-top: 40px; }
     }
 
     &-technologies {
@@ -310,8 +302,11 @@
         margin-top: 2vh;
       }
 
+      &__container { padding-top: 50px; }
+
       .header-3 {
         line-height: 1.8;
+
         &:last-child { margin-top: 4vh; }
       }
 
@@ -388,6 +383,11 @@
 
     &-services {
       &.development__cards {
+        .header-2 {
+          max-width: 100%;
+          font-size: 18px;
+        }
+
         .cards-container {
           .card {
             min-width: 300px;
@@ -416,16 +416,13 @@
         text-align-last: center;
       }
 
-      .button { margin-bottom: 0; }
-    }
-
-    &-about-us {
-      &__description {
+      .button {
         margin-bottom: 0;
-        font-size: 0.9em;
-        line-height: 1.8em;
+        margin-top: 40px;
       }
     }
+
+    &-about-us__description { margin-bottom: 0; }
 
     &-about-us-info {
       background: center/cover no-repeat url('/assets/images/index/about_us_photo_mob.webp');

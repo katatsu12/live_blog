@@ -103,9 +103,8 @@ ul, ol { margin-left: 0; }
 }
 
 .header-3 {
-  font-size: 1.9em;
+  font-size: 30px;
   text-transform: uppercase;
-  font-weight: 100;
   letter-spacing: 0.4em;
   line-height: 1.6;
 }
@@ -122,14 +121,9 @@ ul, ol { margin-left: 0; }
 
 .inria-regular { font-family: 'Inria', serif; }
 
-.info-container {
-  background: $main-gradient;
-  padding-bottom: 7vh;
+.alabaster { background-color: $alabaster; }
 
-  .content { padding: 5vh 20% 0 20%; }
-
-  &.alabaster { background-color: $alabaster; }
-}
+.info-container { background: $main-gradient; }
 
 .card {
   padding: 40px 30px;
@@ -189,7 +183,7 @@ ul, ol { margin-left: 0; }
 
   &.with-padding { padding: 0 25%; }
 
-  &.with-margin { margin: 2.5em auto; }
+  &.with-margin { margin: 45px auto; }
 }
 
 .text-justify { text-align: justify; }
@@ -217,7 +211,7 @@ ul, ol { margin-left: 0; }
   }
 }
 
-.wrap { padding: 8vh 0; }
+.wrap { padding: 100px 0 80px; }
 
 @keyframes fill {
   0% {
@@ -265,6 +259,8 @@ b { font-family: "Cera-Bold", serif; }
 }
 
 @media (max-width: 767px) {
+  .wrap { padding: 50px 0; }
+
   .body-content {
     display: flex;
     flex-direction: row;
@@ -307,15 +303,12 @@ b { font-family: "Cera-Bold", serif; }
     }
   }
 
-  .header-5 { font-size: 1em; }
+  // .header-5 { font-size: 1em; }
 
-  .header-3 { font-size: 1.2em; }
+  .header-3 { font-size: 18px; }
 
   .header-2 {
-    max-width: 90%;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    font-size: 1.25em;
+    font-size: 18px;
     line-height: 1.8;
   }
 

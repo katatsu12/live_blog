@@ -65,9 +65,9 @@
 
 .button.contacts__submit-btn { font-weight: 400; }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .button {
-    margin-top: 4vh;
+    margin-top: 50px;
     max-width: 300px;
     height: 55px;
     font-size: 11px;
