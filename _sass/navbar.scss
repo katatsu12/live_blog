@@ -58,6 +58,7 @@ header {
     border: 1px solid transparent;
     border-radius: 50px;
     transition: 0.3s;
+    text-decoration: none;
 
     &.active {
       box-shadow: $violet-active-shadow;

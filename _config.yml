@@ -29,7 +29,8 @@ url: "https://activebridge.org" # the base hostname & protocol for your site, e.
 twitter_username: jekyllrb
 github_username:  jekyll
 sass:
-  style: compact
+  # style: compact
+  style: compressed
 
 # Build settings
 theme: minima
