@@ -5,7 +5,7 @@
   }
 
   &__main {
-    background-image: linear-gradient(135deg, $sky-ua, $white);
+    background-image: linear-gradient(135deg, var(--sky-blue), var(--white));
     box-shadow: 0px 4px 25px 0px rgba($purple-heart, .25);
 
     img {
@@ -15,9 +15,8 @@
   }
 
   &__ror {
-    background-image: linear-gradient($kviten, $white, $white);
+    background-image: linear-gradient($kviten, var(--white), var(--white));
     box-shadow: 0px 4px 25px 0px rgba($purple-heart, .25);
-
     .list-with-images {
       margin-bottom: 0;
 
@@ -26,7 +25,7 @@
   }
 
   &__reasons {
-    background: radial-gradient(circle, rgba($palianytsia, 1) 0%, rgba($white, 1) 60%);
+    background: radial-gradient(circle, rgba($palianytsia, 1) 0%, var(--white) 60%);
     box-shadow: inset 0px 12px 15px -7px $moon_raker;
     transition: all 1s ease-out;
 
@@ -51,9 +50,9 @@
         width: 279px;
 
        .extendable_card {
-          background-color: rgba($white, .7);
+          background-color: var(--ror-cards);
           border-radius: 30px;
-          box-shadow: $main-shadow;
+          box-shadow: var(--main-shadow);
           box-sizing: border-box;
           max-height: 350px;
           overflow: hidden;
@@ -80,7 +79,7 @@
          }
 
          &:hover {
-            background-color: rgba($white, 1);
+            background-color: var(--white);
             max-height: 600px;
             z-index: 1;
 
@@ -95,7 +94,7 @@
   }
 
   &__quality {
-    background-image: linear-gradient(-135deg, $azovstal, $white);
+    background-image: linear-gradient(-135deg, $azovstal, var(--white));
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, .25);
   }
 
@@ -105,14 +104,13 @@
   }
 
   &__quality-awards {
-    background-image: linear-gradient(to left, $azovstal, $white);
+    background-image: linear-gradient(to left, $azovstal, var(--white));
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, .25);
-
     .development__awards { margin-top: 0; }
   }
 
   &__approaches {
-    background-image: linear-gradient(-135deg, $sky-ua, $white);
+    background-image: linear-gradient(-135deg, var(--sky-blue), var(--white));
     box-shadow: 0px 4px 25px 0px rgba($purple-heart, .25);
 
     .list-with-images__item:not(:first-child) {
@@ -137,20 +135,24 @@
   }
 
   &__tools {
-    background-image: linear-gradient(-45deg, rgba($kviten, .4), rgba($azovstal, .4));
+    background-image: linear-gradient(-45deg, var(--light-pink-gradient));
     box-shadow: 4px 8px 15px 5px rgba(0, 0, 0, .09);
 
     .list-with-images.horizontal { margin-bottom: 0; }
   }
 
   .development__cards {
-    .cards-container .card { justify-content: space-between; }
+    .cards-container .card {
+      justify-content: space-between;
+
+      .button { background-color: var(--transparent-dark-btn); }
+    }
   }
 }
 
 @media screen and (max-width: 767px) {
   .ror_dev_services {
-    &__ror { background-image: linear-gradient($kviten, $white); }
+    &__ror { background-image: linear-gradient($kviten, var(--white)); }
 
     &__reasons {
       .extendable_cards .extendable_card-wrapper {

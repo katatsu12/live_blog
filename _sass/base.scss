@@ -33,13 +33,14 @@
 }
 
 body {
-  color: $black;
+  color: var(--body-color);
   font-family: 'FixelText-Regular', serif;
   -webkit-tap-highlight-color: transparent;
+  background-color: var(--white);
 }
 p { margin: 0; }
 a:hover { text-decoration: none !important; }
-a:visited { color: $black; }
+a:visited { color: var(--body-color); }
 ul, ol { margin-left: 0; }
 
 .wrapper {

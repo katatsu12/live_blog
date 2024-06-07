@@ -1,4 +1,6 @@
 .about {
+  &__vision { background-image: linear-gradient(to top, var(--carousel-bg), var(--white)); }
+
   &__crew {
     background: center/cover no-repeat url("/assets/images/about/crew.webp");
     background-color: $gray;
@@ -12,7 +14,7 @@
       right: 0;
       bottom: 0;
       backdrop-filter: blur(8px);
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, .5);
     }
 
     .wrapper {
@@ -21,11 +23,18 @@
     }
 
     .crew__item {
-      background-color: rgba($white, .75);
-      box-shadow: inset -1px 4px 13px -5px $white, inset -1px -5px 5px grey, 2px 1px 12px 0px $black;
+      background-color: var(--crew-card-rgba);
+      box-shadow: $main-shadow;
     }
 
-    &-button { background-color: $white !important; }
+    &-button {
+      background-color: var(--white-purple) !important;
+
+      &:hover { color: $main-violet; }
+    }
+
+    .description.white-text,
+    .block-cera-title.white-text { color: $white !important; }
   }
 
   &__benefits {
@@ -38,7 +47,7 @@
       height: 60%;
       right: 0;
       top: 40%;
-      background-color: rgba(252, 252, 252, 0.7);
+      background: var(--transparent-gradient-dark);
       backdrop-filter: blur(1.5px);
     }
 
@@ -100,7 +109,27 @@
     }
   }
 
-  &__testimonials { background: center/cover no-repeat url('/assets/images/about/about-bg.webp'); }
+  &__testimonials {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: center/cover no-repeat url('/assets/images/about/about-bg.webp');
+      filter: var(--filter-invert);
+    }
+
+    .wrapper {
+      position: sticky;
+
+      .block-inria-title,
+      .description { color: var(--body-color); }
+    }
+  }
 
   &__culture {
     min-height: 100vh;
@@ -110,6 +139,7 @@
       position: relative;
       min-height: 100vh;
     }
+
     &-text { line-height: 1.6; }
 
     &-button {
@@ -117,9 +147,18 @@
       bottom: 0;
       left: 50%;
       min-width: 500px;
-      background-color: rgba($white, .85) !important;
+      background-color: var(--transparent-white-btn) !important;
       transform: translate(-50%, -50%);
+
+      &:hover { color: $main-violet; }
     }
+  }
+
+  #about-read-testimonials {
+    background-color: var(--transparent-dark-btn);
+    color: $black !important;
+
+    &:hover { color: $main-violet !important; }
   }
 }
 
@@ -142,7 +181,7 @@
 
   &__item-image {
     align-items: center;
-    background-color: $white;
+    background-color: var(--white);
     border: 6px solid $pie-chart-border;
     border-radius: 50%;
     display: flex;
@@ -184,7 +223,7 @@
 
     &__benefits {
       .overlay {
-        top: 53%;
+        top: 57%;
         height: 43%;
       }
 

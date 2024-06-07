@@ -3,7 +3,8 @@
   background-position: right 0 bottom 0, top 0 left 0;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0px 2px 10px 10px rgba(23, 19, 43, 0.10);
+  box-shadow: 0px 2px 10px 10px rgba(23, 19, 43, .10);
+  filter: var(--filter-invert);
   padding-bottom: 200px;
 
   &__field {
@@ -37,7 +38,11 @@
    height: 60px;
    border: none;
    max-width: 600px;
-   min-width: 320px
+   min-width: 320px;
+   background-color: transparent;
+   color: $black;
+
+   &:hover { color: $main-violet; }
   }
 
   &__form-group {
@@ -87,6 +92,8 @@
     margin-top: 20px;
     font: italic 14px/2 'FixelText-Regular', serif;
     text-align: center;
+
+    &:visited { color: $black; }
   }
 
   textarea {

@@ -1,6 +1,6 @@
 .ecommerce {
   &__main {
-    background-image: linear-gradient(135deg, $black_sea, $main-violet);
+    background-image: linear-gradient(135deg, $black_sea, var(--purple));
 
     .list-with-images.horizontal .list-with-images__item {
       &:nth-child(-n+2) {
@@ -45,6 +45,10 @@
 
   &__help {
     background: $titan_white;
+    filter: var(--filter-invert);
+
+    .message,
+    .description { color: $black; }
   }
 
   .solutions_cases__case_study {

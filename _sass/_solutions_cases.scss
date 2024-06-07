@@ -59,7 +59,7 @@
 
   &__idea {
     align-items: center;
-    background-image: linear-gradient(135deg, $purple-heart, $sky-ua);
+    background-image: linear-gradient(135deg, $purple-heart, var(--sky-black));
     display: flex;
     justify-content: space-between;
 

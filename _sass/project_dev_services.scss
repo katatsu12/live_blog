@@ -1,6 +1,6 @@
 .project_dev_services {
   &__main {
-    background-image: linear-gradient($palianytsia, $white, $white, $buzok);
+    background-image: linear-gradient($palianytsia, var(--white), var(--white), $buzok);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .25);
 
     .list-with-images.horizontal:not(:last-child) {
@@ -83,7 +83,7 @@
   }
 
   .development__cards  {
-    background-image: linear-gradient($kviten, $white);
+    background-image: linear-gradient($kviten, var(--white));
     box-shadow: 0px 4px 25px 0px rgba($purple-heart, .25);
 
     .cards-container {
@@ -96,6 +96,13 @@
         &__description { margin-bottom: 0; }
       }
     }
+  }
+
+  #project_dev_button {
+    background: var(--transparent-dark-btn);
+    color: $black;
+
+    &:hover { color: $main-violet; }
   }
 }
 

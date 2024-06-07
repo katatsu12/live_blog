@@ -21,12 +21,10 @@
     &-item:not(:last-child) { margin-bottom: 1.5em; }
   }
 
-  &__main {
-    background-image: linear-gradient(to right top, $moon_raker, #F7EFFC, $moon_raker);
-  }
+  &__main { background-image: linear-gradient(to right top, var(--raker-sea-gradient)); }
 
   &__web_solutions {
-    background-image: linear-gradient(to bottom, $white, $palianytsia);
+    background-image: linear-gradient(to bottom, var(--white), $palianytsia);
     box-shadow: 0px 0px 15px 0px $moon_raker;
 
     img {
@@ -70,12 +68,12 @@
   }
 
   &__customized_approach {
-    background-image: linear-gradient(to bottom, $buzok, $white, $white);
+    background-image: linear-gradient(to bottom, $buzok, var(--white), var(--white));
     box-shadow: inset -6px 20px 15px -12px #6b6897;
   }
 
   &__technologies {
-    background: center/cover no-repeat url('/assets/images/expertise/technologies-bg.webp');
+    background-image: var(--technologies);
 
     .button {
       margin-top: 8vh;
@@ -89,8 +87,10 @@
   }
 
   &__solutions {
-    background-image: linear-gradient(to bottom, rgba($moon_raker, .5), $white);
+    background-image: linear-gradient(to bottom, var(--raker-purple-gradient));
     box-shadow: 0px 4px 25px 0px rgba($purple-heart, .25);
+
+    .message { color: var(--body-color); }
 
     .about_us_info__container {
       width: 100%;
@@ -118,12 +118,12 @@
 
   &__industries {
     #web_dev_button {
-      color: $white;
-      background: $buzok;
+      color: var(--white-black);
+      background: var(--buzok-white);
       max-width: 470px;
       box-sizing: border-box;
 
-      &:hover { color: $black;}
+      &:hover { color: $main-violet; }
     }
   }
 
@@ -131,6 +131,12 @@
     .cards-container {
       .card { justify-content: space-between; }
       .card__description { margin: 30px 0; }
+
+      .button {
+        background-color: var(--transparent-dark-btn);
+
+        &:hover { color: $main-violet; }
+      }
     }
   }
 }

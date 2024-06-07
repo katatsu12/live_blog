@@ -23,7 +23,7 @@
   }
 
   &__cards {
-    background: radial-gradient(circle, rgba($buzok, 1) 0%, rgba($white, 1) 60%);
+    background: radial-gradient(circle, rgba($buzok, 1) 0%, rgba(var(--rgba-white)) 60%);
     box-shadow: inset -6px 12px 15px -7px $moon_raker;
 
     .card__title-2  {
@@ -40,7 +40,7 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        background: rgba($white, .4);
+        background: var(--card-bg-rgba);
         max-height: max-content;
 
         &__icon img {
@@ -60,8 +60,11 @@
           max-width: 200px;
           height: 50px;
           margin: 0 auto;
+          background-color: var(--transparent-dark-btn);
           color: $purple-heart;
           font-size: 13px;
+
+          &:hover { color: $main-violet; }
         }
       }
     }
@@ -82,7 +85,7 @@
     }
 
     &__cards {
-      background-image: linear-gradient(to top, $buzok, $white);
+      background-image: linear-gradient(to top, $buzok, var(--white));
       .card__title-2 { font-size: 16px; }
 
       .cards-container {

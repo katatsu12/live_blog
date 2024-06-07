@@ -68,7 +68,7 @@
   &__animate-visibility {
     animation: scalify ease-in-out;
     animation-timeline: --item;
-    background: $white;
+    background: var(--carousel-bg);
     border-radius: 20px;
     box-sizing: border-box;
     box-shadow: -2px -2px 12px 2px rgba($dark_black, .25) inset;
@@ -154,10 +154,7 @@
       font-size: 11px;
       scale: 0.72;
 
-      &:hover {
-        color: $black_sea;
-        background: $white;
-      }
+      &:hover { color: var(--sea-violet); }
     }
   }
 

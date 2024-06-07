@@ -1,12 +1,12 @@
 .services {
   .animate-visibility__image img { width: 120px; }
-  .button { background: $main-gradient; }
+
+  .button:not(#services-free-consultation) { background: $main-gradient; }
 
   .cards-container {
     justify-content: space-around;
 
     .card {
-      background: rgba($white, .4);
       z-index: 1;
       max-width: 353px;
       min-width: 350px;
@@ -69,8 +69,11 @@
       width: 100%;
       height: 100%;
       right: 0;
-      background-color: rgba(252, 252, 252, 0.7);
+      top: 0;
+      background: var(--white-gradient-dark);
     }
+
+    .description { color: var(--body-color); }
   }
 
   &__custom-ror-dev {
@@ -96,7 +99,7 @@
   }
 
   &__mobile-dev {
-    background: radial-gradient(circle, rgba($main-lilac, 1) 0%, rgba($white, 1) 100%);
+    background: radial-gradient(circle, var(--lilac-buzok) 0%, rgba(var(--rgba-white)) 100%);
   }
 
   &__engagement-models {
@@ -121,7 +124,14 @@
   }
 
   &__approaches {
-    .button { background: transparent; }
+    background-image: linear-gradient(to top, var(--carousel-bg), var(--white));
+  }
+
+  #services-free-consultation {
+    background-color: var(--transparent-dark-btn);
+    color: $black;
+
+    &:hover { color: $main-violet; }
   }
 }
 

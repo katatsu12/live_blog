@@ -1,7 +1,7 @@
 .faq {
   &__main-content {
     background: no-repeat url('/assets/images/faq/Cloud-1.webp'),
-                linear-gradient(132deg, $palianytsia 8.4%, $buzok 52.42%, $sky-ua 93.77%);
+                linear-gradient(132deg, $palianytsia 8.4%, var(--buzok-liberty) 52.42%, var(--sky-blue) 93.77%);
     background-blend-mode: luminosity;
     background-position: top 87px left 0, top 0 left 0;
     position: relative;
@@ -18,7 +18,7 @@
   }
 
   &__table {
-    border: 1px solid $black_sea;
+    border: 1px solid var(--sea-white);
     border-bottom: none;
   }
 
@@ -27,7 +27,7 @@
     overflow: hidden;
 
     &[open] + .faq__detail-description {
-      border-bottom-color: $black_sea;
+      border-bottom-color: var(--sea-white);
       transition: max-height 1000ms ease-out, border-bottom 0ms linear;
     }
     &[open] + .faq__detail-description.small { max-height: 300px }
@@ -36,7 +36,7 @@
   }
 
   &__summary {
-    color: $black_sea;
+    color: var(--sea-white);
     cursor: pointer;
     font-family: 'FixelText-Bold';
     font-size: 18px;
@@ -52,7 +52,7 @@
   &__detail-description {
     box-sizing: border-box;
     border-bottom: 1px solid transparent;
-    border-top: 1px solid $black_sea;
+    border-top: 1px solid var(--sea-white);
     max-height: 0;
     overflow: hidden;
     transition: max-height 500ms ease-out, border-bottom 0ms 500ms linear;
@@ -62,7 +62,7 @@
   ul { margin: 0 0 0 10px; }
 
   &__bottom-info {
-    background: linear-gradient(116deg, $purple-heart 0%, $sky-ua 100%);
+    background: linear-gradient(116deg, $purple-heart, var(--sky-black));
     box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.25);
 
     .wrapper {
@@ -71,6 +71,7 @@
       justify-content: space-around;
     }
   }
+
   &__gift { mix-blend-mode: luminosity; }
 }
 

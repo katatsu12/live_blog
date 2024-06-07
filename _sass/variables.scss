@@ -4,6 +4,7 @@ $black:                   #333;
 $black_sea:               #2E2B33;
 $buzok:                   #a49feb;
 $dark_black:              #000;
+$dark_cerulean:           #004779;
 $dark-purple:             #1b0b37;
 $dark-violet:             #844ca9;
 $deep_amethyst:           #9480a7;
@@ -26,12 +27,168 @@ $titan_white:             #F4F3FF;
 $white:                   #fff;
 $post-links:              #2a7ae2;
 $ocean_light:             #e0effd;
+$dark-theme-white:        #fff;
+$dark-theme-black:        #000;
 
-$main-gradient:        linear-gradient(135deg, $main-violet, $purple-heart);
+$rgba-white:              255,255,255;
+$rgba-black:              0,0,0,1;
 
-$active-shadow:        inset 2px 2px 5px grey, inset -2px -2px 5px $white;
-$violet-shadow:        inset 2px 7px 10px -5px #9c64d2, inset -4px -5px 16px #4c2b84;
-$light-purple-shadow:  2px 2px 18px 2px rgba($dark_black, .15), inset 0px 4px 15px 0px rgba($dark_black, .15);
-$main-shadow:          0px 4px 20px 0px rgba($dark_black, .2), inset -2px -2px 12px 0px rgba($dark_black, .25);
-$violet-hover-shadow:  inset -1px 4px 13px -5px $white, inset -1px -5px 5px $deep_amethyst, 2px 1px 12px 0px $main-violet;
-$violet-active-shadow: inset 0px 0px 15px 1px rgba($main-violet, .3);
+$rgba-white:              255,255,255;
+$rgba-black:              0,0,0,1;
+
+$main-gradient:             linear-gradient(135deg, $purple-heart, var(--purple));
+$dark-gradient-bg-carousel: linear-gradient(135deg, $dark-purple, rgba(193, 201, 214, .5));
+
+$rgba-white:                255,255,255;
+$rgba-black:                0,0,0,1;
+
+$active-shadow:             inset 2px 2px 5px grey, inset -2px -2px 5px var(--white);
+$violet-shadow:             inset 2px 7px 10px -5px #9c64d2, inset -4px -5px 16px #4c2b84;
+$light-purple-shadow:       2px 2px 18px 2px rgba($dark_black, .15), inset 0px 4px 15px 0px rgba($dark_black, .15);
+$main-shadow:               0px 4px 20px 0px rgba($dark_black, .2), inset -2px -2px 12px 0px rgba($dark_black, .25);
+$violet-hover-shadow:       inset -1px 4px 13px -5px var(--white), inset -1px -5px 5px var(--amethyst-purple), 2px 1px 12px 0px $main-violet;
+$violet-active-shadow:      inset 0px 0px 15px 1px rgba($main-violet, .3);
+$dark-main-shadow:          0px 4px 20px 0px rgba($white, .2), inset -2px -2px 12px 0px rgba($white, .25);
+
+
+:root {
+  --filter-invert:                invert(0);
+  --white:                        #{$white};
+  --black:                        #{$dark_black};
+  --purple:                       #{$main-violet};
+  --rgba-white:                   #{$rgba-white};
+  --carousel-bg:                  #{$white};
+  --body-color:                   #{$black};
+  --amethyst-purple:              #{$deep_amethyst};
+  --lilac-sea:                    #{$main-lilac};
+  --transparent-btn:              #{transparent};
+  --main-shadow:                  #{$main-shadow};
+  --white-purple:                 #{$white};
+  --white-black:                  #{$white};
+  --transparent-gradient-dark:    #{rgba($white, .5)};
+  --transparent-white-btn:        #{rgba($white, .85)};
+  --sky-black:                    #{$sky-ua};
+  --navbar-shadow:                #{rgba($dark_black, .25)};
+  --white-gradient:               #{$alabaster};
+  --technologies:                 #{linear-gradient(135deg, $main-violet, rgba($moon_raker, .5), rgba($moon_raker, .5), $purple-heart)};
+  --card-bg-rgba:                 #{rgba($white, .4)};
+  --transparent-dark-btn:         #{transparent};
+  --lavender-purple:              #{#EBDEF5};
+  --lilac-black:                  #{$main-lilac};
+  --crew-card-rgba:               #{rgba($white, .75)};
+  --sea-violet:                   #{$black_sea};
+  --white-gradient-dark:          #{rgba($white, .7)};
+  --lilac-buzok:                  #{$main-lilac};
+  --raker-sea-gradient:           #{$moon_raker, #F7EFFC, $moon_raker};
+  --raker-sea-black-gradient:     #{rgba($moon_raker, .5), $white};
+  --purple-white:                 #{$purple-heart};
+  --buzok-white:                  #{$buzok};
+  --sky-blue:                     #{$sky-ua};
+  --ror-cards:                    #{rgba($white, .7)};
+  --purple-violet:                #{$purple-heart};
+  --light-pink-gradient:          #{rgba($kviten, .4), rgba($azovstal, .4)};
+  --purple-sea:                   #{$purple-heart};
+  --light-purple-gradient:        #{$medium_purple 28.4%, rgba($buzok, .7) 52.42%, $medium_purple 73.77%};
+  --azovstal-dark-gradient:       #{0deg, $white 50%, $azovstal 100%};
+  --raker-buzok:                  #{$moon_raker};
+  --light-with-dark-gradient:     #{$white};
+  --purple-medium:                #{$purple-heart};
+  --white-purple-gradient:        #{$white};
+  --footer-hover:                 #{$main-violet};
+  --sky-blue-gradient:            #{$sky-ua 0%, rgba($sky-ua, 0.5) 18.75%, $white 91.14%};
+  --light-black:                  #{#EFF1F5};
+  --purple-light-blue-darker:     #{rgba($buzok, .75), rgba($sky-ua, .75)};
+  --kviten-black_sea:             #{$kviten};
+  --main-dark-violet:             #{$main-violet};
+  --buzok-lavender:               #{$buzok};
+  --buzok-liberty:                #{$buzok};
+  --buzok-kviten-darker-gradient: #{35deg, $buzok, $kviten};
+  --sea-white:                    #{$black_sea};
+  --kviten-dark-purple:           #{$kviten};
+  --lilac-dark-purple:            #{$main-lilac};
+  --black-white-shadow:           #{rgba($dark_black, .75)};
+  --dark-black-dark-purple:       #{$dark_black};
+  --ocean-light-dark:             #{$ocean_light};
+  --titan-black:                  #{$titan_white};
+  --kviten-medium-purple:         #{$kviten};
+  --pale-gray-sea:                #{#eee};
+
+  .dark-text-inversion {
+    h1,h2:not(.blue),h3,h4,p:not(.timeline-item__content-output-title),
+    div:not(.timeline-item__content-output),
+    li:not(.timeline-item__content-output-item) { color: var(--body-color); }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --filter-invert:                invert(1) hue-rotate(180deg);
+    --white:                        #{$dark_black};
+    --black:                        #{$white};
+    --purple:                       #{$dark-purple};
+    --rgba-white:                   #{$rgba-black};
+    --carousel-bg:                  #{$dark-purple};
+    --body-color:                   #{$white};
+    --amethyst-purple:              #{#4c2b84};
+    --lilac-sea:                    #{$black_sea};
+    --transparent-btn:              #{rgba($dark-purple, .5)};
+    --main-shadow:                  #{$dark-main-shadow};
+    --white-purple:                 #{rgba($dark_black, .25)};
+    --white-black:                  #{$black};
+    --transparent-gradient-dark:    #{linear-gradient(to bottom, rgba($dark_black, .1), rgba($dark-purple, .7), rgba($dark-purple, .7))};
+    --transparent-white-btn:        #{rgba($dark_black, .6)};
+    --sky-black:                    #{$dark-purple};
+    --navbar-shadow:                #{rgba($white, .25)};
+    --white-gradient:               #{linear-gradient(to top, rgba($dark_black, .1), rgba($dark-purple, .7), rgba($dark-purple, .7))};
+    --technologies:                 #{linear-gradient(135deg, $black_sea, $main-violet, $main-violet, $purple-heart)};
+    --card-bg-rgba:                 #{rgba($dark_black, .25)};
+    --transparent-dark-btn:         #{rgba($white, .9)};
+    --lavender-purple:              #{$dark-purple};
+    --lilac-black:                  #{$dark_black};
+    --crew-card-rgba:               #{rgba($dark_black, .5)};
+    --sea-violet:                   #{$main-violet};
+    --white-gradient-dark:          #{$dark-gradient-bg-carousel};
+    --lilac-buzok:                  #{$buzok};
+    --raker-sea-gradient:           #{$black_sea, $purple-heart};
+    --raker-purple-gradient:        #{$dark-purple, $dark_black};
+    --purple-white:                 #{$white};
+    --buzok-white:                  #{$white};
+    --sky-blue:                     #{$dark_cerulean};
+    --ror-cards:                    #{rgba($dark_black, .25)};
+    --purple-violet:                #{$main-violet};
+    --light-pink-gradient:          #{#171721, rgba($dark-purple, .5)};
+    --purple-sea:                   #{$black_sea};
+    --light-purple-gradient:        #{$medium_purple, #9c64d2, $medium_purple};
+    --azovstal-dark-gradient:       #{0deg, $dark_black 0%, #2D333F 100%};
+    --raker-buzok:                  #{$medium_purple};
+    --light-with-dark-gradient:     #{linear-gradient(to top, $dark-purple, $dark_black)};
+    --purple-medium:                #{$medium_purple};
+    --white-purple-gradient:        #{linear-gradient(to top, $purple-heart, $dark-purple)};
+    --footer-hover:                 #{$purple-heart};
+    --sky-blue-gradient:            #{$dark_cerulean 0%, $dark_black 100%};
+    --light-black:                  #{$dark_black};
+    --purple-light-blue-darker:     #{rgba(65, 63, 118, .75), rgba($dark_cerulean, .75)};
+    --kviten-black_sea:             #{$black_sea};
+    --main-dark-violet:             #{$dark-violet};
+    --buzok-lavender:               #{#70428C};
+    --buzok-liberty:                #{#5D57A4};
+    --buzok-kviten-darker-gradient: #{35deg, #624E99, #694893};
+    --sea-white:                    #{$white};
+    --kviten-dark-purple:           #{$dark-violet};
+    --lilac-dark-purple:            #{#694893};
+    --black-white-shadow:           #{rgba($white, .75)};
+    --dark-black-dark-purple:       #{$dark-violet};
+    --ocean-light-dark:             #{$purple-heart};
+    --titan-black:                  #{$black_sea};
+    --kviten-medium-purple:         #{$medium_purple};
+    --pale-gray-sea:                #{#171721};
+
+    .dark-text-inversion {
+      h1,h2:not(.blue),h3,h4,p:not(.timeline-item__content-output-title),
+      div:not(.timeline-item__content-output),
+      li:not(.timeline-item__content-output-item) { color: var(--body-color); }
+    }
+
+  .dark-background-dark-content { background: $dark-gradient-bg-carousel; }
+  }
+}

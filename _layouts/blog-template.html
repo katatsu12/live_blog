@@ -5,9 +5,9 @@ layout: default
 <section class="blog">
   <div class="blog__main-block blog-main pt-9">
     <div class="wrapper">
-      <div class="blog-main__header-description">
-        <h1 class="page-title">{{ site.data.blog.title }}</h2>
-        <h2 class="message inria-bold">{{ site.data.blog.description }}</p>
+      <div class="blog-main__header-description dark-text-inversion">
+        <h1 class="page-title">{{ site.data.blog.title }}</h1>
+        <h2 class="message inria-bold">{{ site.data.blog.description }}</h2>
           <ul class="blog-main__articles py-4">
             <p class="message cera-medium text-upcase text-left">{{ site.data.blog.articles.title }}</p>
             {% for element in site.data.blog.articles.lines %}

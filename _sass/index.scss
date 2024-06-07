@@ -6,16 +6,28 @@
   background-color: $alabaster;
   line-height: 1.5;
   z-index: 1;
+  filter: var(--filter-invert);
+
   .index-logo { width: 210px; }
 
   .description {
     margin: 0 auto;
-    position: inherit;
+    position: sticky;
     max-width: 700px;
     width: 100%;
+    color: $dark_black;
     z-index: 1;
   }
-  .button { background: rgba($white, .4); }
+
+  .page-title,
+  .block-inria-title { color: $black; }
+
+  .button {
+    background: rgba(var(--rgba-white), .4);
+    color: $dark_black;
+
+    &:hover { color: var(--black); }
+  }
 }
 
 .awards-img {
@@ -70,6 +82,12 @@
     z-index: 1;
 
     .button { box-shadow: $light-purple-shadow; }
+
+    .wrapper {
+      color: $white;
+
+      .message, .description { color: currentColor; }
+    }
   }
 
   &-testimonials__header {
@@ -79,9 +97,7 @@
   }
 
   &-technologies {
-    &__container {
-      background: linear-gradient(135deg, $white, $main-lilac);
-    }
+    &__container { background: linear-gradient(135deg, var(--white), var(--lilac-sea)); }
 
     &__holder {
       background: no-repeat url('/assets/images/index/technologies_photo.webp');
@@ -101,7 +117,7 @@
       margin-left: auto;
       width: 52%;
       overflow: hidden;
-      background: linear-gradient(135deg, #EBDEF5, $main-lilac);
+      background: linear-gradient(135deg, var(--lavender-purple), var(--white));
       border-top: 1px solid rgba($dark_black, .2);
       border-bottom: 1px solid rgba($dark_black, .2);
 
@@ -120,7 +136,7 @@
         height: 40%;
         width: 100%;
         padding-bottom: 10%;
-        background: linear-gradient(to top, $main-lilac 34%, transparent 100%);
+        background: linear-gradient(to top, var(--lilac-black) 34%, transparent 100%);
 
         .button {
           margin: 0 20px;
@@ -144,8 +160,19 @@
   }
 
   &-solutions {
-    background: center/cover no-repeat url('/assets/images/index/solutions-photo.webp');
     background-color: $light-grey;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: center / cover no-repeat url(/assets/images/index/solutions-photo.webp);
+      filter: var(--filter-invert);
+    }
 
     .animate-visibility__title {
       font-family: 'FixelText-Regular';
@@ -160,12 +187,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+
+  .message,
+  .description { color: var(--body-color); }
+
   .index-solutions__items { margin: 7vh auto 0 auto; }
 
   .index-solutions__button {
     margin-top: 1vh;
     background: $main-gradient;
   }
+}
+
+#index-view-services,
+#index-more-technologies {
+  color: $black !important;
+
+  &:visited { color: $black; }
+}
+
+#index-view-services,
+#index-more-technologies,
+#index-read-testimonials,
+#index-more-about-us-desktop {
+  background-color: var(--transparent-dark-btn);
+
+  &:hover { color: $main-violet !important; }
+}
+
+#index-read-testimonials,
+#index-more-about-us-desktop {
+  color: var(--white-black) !important;
+
+  &:visited { color: $white; }
 }
 
 @media (max-width: 1200px) {
@@ -229,7 +284,6 @@
   }
 
   .index {
-
     &-home {
       .button { margin-top: 3em; }
     }
@@ -318,5 +372,7 @@
         box-shadow: $violet-shadow;
       }
     }
+
+    #index-more-technologies { color: $white !important; }
   }
 }

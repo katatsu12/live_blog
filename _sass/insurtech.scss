@@ -1,11 +1,11 @@
 .insurtech {
   &__main {
-    background-image: linear-gradient(to right top, $palianytsia, #EFF1F5, #EFF1F5, $palianytsia);
+    background-image: linear-gradient(to right top, $palianytsia, var(--light-black), var(--light-black), $palianytsia);
     .list-with-images__item-icon img { box-shadow: none; }
   }
 
   &__design_and_development {
-    background-image: linear-gradient(-45deg, rgba($buzok, .5), #EFF1F5, #EFF1F5);
+    background-image: linear-gradient(-45deg, rgba($buzok, .5), var(--light-black), var(--light-black));
     box-shadow: inset 0px 0px 20px 0px rgba($black, .25);
 
     .personal-info {
@@ -36,7 +36,7 @@
   }
 
   .solutions_cases__case_study {
-    background-image: linear-gradient(rgba($buzok, .75), rgba($sky-ua, .75));
+    background-image: linear-gradient(var(--purple-light-blue-darker));
     box-shadow: 0px 0px 20px 4px rgba($purple-heart, .05);
   }
 
@@ -46,7 +46,12 @@
                 linear-gradient(30deg, $kviten, $titan_white, $titan_white);
     background-blend-mode: luminosity;
     background-position: top 0 left 0, top 50% right 0, top 0 left 0;
+    filter: var(--filter-invert);
     position: relative;
+
+    .block-cera-title,
+    .message,
+    .description { color: $black; }
 
     .list-with-images.horizontal .list-with-images__item {
       max-width: 23%;
@@ -56,31 +61,30 @@
   }
 
   &__full_circle {
-    background-image: linear-gradient(to left top, $black_sea, $main-violet, $kviten);
+    background-image: linear-gradient(to left top, var(--sea-violet), var(--purple), var(--kviten-black_sea));
     box-shadow: inset 0px 0px 20px 4px rgba($purple-heart, .25);
 
     .button {
       background-color: $white;
-      font-weight: 400;
+      color: $black;
+
       &:hover { color: $main-violet !important; }
     }
     .list-with-images__item-icon img { box-shadow: none; }
   }
-  .solutions_cases__idea { background-image: linear-gradient(to left, $main-violet, $buzok); }
+
+  .solutions_cases__idea { background-image: linear-gradient(to left, var(--main-dark-violet), var(--buzok-lavender)); }
 }
 
 @media (max-width: 930px) {
   .insurtech {
-    &__features {
-      background: linear-gradient(30deg, $kviten, $titan_white, $titan_white);
-      position: relative;
-    }
+    &__features { position: relative; }
   }
 }
 
 @media screen and (max-width: 767px) {
   .insurtech {
-    &__main { background-image: linear-gradient($palianytsia, #EFF1F5, #EFF1F5); }
+    &__main { background-image: linear-gradient($palianytsia, var(--light-black), var(--light-black)); }
     &__features { .list-with-images.horizontal .list-with-images__item { max-width: 400px; } }
     .solutions_cases__idea { background-image: linear-gradient(to left top, $buzok, $main-violet); }
     .personal-info { &__info-line { font-size: 12px; } }

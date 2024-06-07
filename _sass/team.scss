@@ -1,17 +1,22 @@
 .team {
+  .message,
+  .description { color: var(--body-color); }
+
   &__main {
+    height: 75vh;
     background: center/cover no-repeat url('/assets/images/team/team-bg.webp');
     background-color: $dusty-silver;
-    height: 75vh;
+    filter: var(--filter-invert);
   }
 
   &__help {
-    background-color: $sky-ua;
+    background-color: var(--sky-blue);
     box-shadow: inset 0px 2px 20px 0px rgba($dark_black, .1), 0px 0px 12px 0px rgba($dark_black, .5);
+    filter: var(--filter-invert);
   }
 
   &__people {
-    background-image: linear-gradient(to right, $sky-ua, $white);
+    background-image: linear-gradient(to right, var(--sky-blue), var(--white));
     box-shadow: 0px 4px 25px 0px rgba($purple-heart, .25);
 
     *::before,
@@ -76,8 +81,23 @@
   }
 
   &__crew {
-    background: center/cover no-repeat url('/assets/images/about/about-bg.webp');
+    position: relative;
     box-shadow: 0px 0px 20px 0px rgba($dark_black, .25);
+    color: var(--body-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: center / cover no-repeat url(/assets/images/about/about-bg.webp);
+      filter: var(--filter-invert);
+      z-index: -1;
+    }
+
+    .crew__item { box-shadow: var(--main-shadow); }
   }
 
   &__important_things {
@@ -118,10 +138,16 @@
   }
 
   &__expertise {
-    .button { margin-top: 3.5em; }
+    .button {
+      margin-top: 3.5em;
+      background-color: var(--transparent-dark-btn);
+      color: $black;
+
+      &:hover { color: $main-violet; }
+    }
 
     &.development__cards {
-      background-image: linear-gradient(to bottom, $kviten, $white);
+      background-image: linear-gradient(to bottom, $kviten, var(--white));
     }
   }
 }

@@ -5,8 +5,8 @@ header {
   position: fixed;
   z-index: 5;
   width: 100%;
-  background-color: $white;
-  box-shadow: 0px 4px 4px 0px rgba(#000, .25);
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px 0px var(--navbar-shadow);
   view-transition-name: header;
 
   #menu-btn { display: none; }
@@ -39,7 +39,7 @@ header {
 
   &__link {
     margin: 0 1.5vw;
-    color: $black;
+    color: var(--black);
     font-size: 0.8em;
     text-transform: uppercase;
     text-decoration: none;
@@ -53,7 +53,7 @@ header {
     display: block;
     margin: 0;
     padding: 0.7em 2.2em;
-    background: linear-gradient($white, $white) padding-box,
+    background: linear-gradient(var(--white), var(--white)) padding-box,
                 linear-gradient(to right, $main-violet, $purple-heart) border-box;
     border: 1px solid transparent;
     border-radius: 50px;
@@ -63,6 +63,7 @@ header {
       box-shadow: $violet-active-shadow;
       background: transparent;
       border: none;
+      font-family: 'Cera-Bold';
     }
   }
 }
@@ -125,9 +126,9 @@ header {
       -webkit-transition: all .5s ease-in-out;
 
       .header-navbar__sub-link {
-        color: $black;
         display: block;
         padding: 10px 20px;
+        color: var(--black);
         font-size: 0.7em;
         letter-spacing: 0.1em;
         text-decoration: none;
@@ -136,11 +137,15 @@ header {
     }
 
     &__item:hover .header-navbar__subitems {
-      background-color: $white;
-      border-radius: 1em;
+      margin-top: 19px;
+      padding-bottom: 20px;
+      background-color: var(--white);
+      border-bottom-right-radius: 1em;
+      border-bottom-left-radius: 1em;
+      box-shadow: 0px 4px 4px 0px var(--navbar-shadow);
       opacity: 1;
-      padding: 20px 0;
       visibility: visible;
+
       .header-navbar__sub-link:hover { color: $main-violet; }
     }
 
@@ -196,7 +201,7 @@ header {
       z-index: 3;
 
       &__subitems {
-        color: $white;
+        color: var(--white);
         display: block;
         position: static;
         padding-left: 20px;
@@ -208,7 +213,7 @@ header {
         }
 
         .header-navbar__sub-link {
-          color: $white;
+          color: var(--white);
           font-size: 13px;
           letter-spacing: 0.1em;
           position: relative;
@@ -221,7 +226,7 @@ header {
             left: -0.6em;
             width: 3px;
             height: 3px;
-            background-color: $white;
+            background-color: var(--white);
             border-radius: 50%;
           }
         }
@@ -237,21 +242,21 @@ header {
         &:active { transform: scale(0.9); }
       }
 
-      &__item { .header-navbar__link { color: $white; } }
+      &__item { .header-navbar__link { color: var(--white); } }
 
       &__link-contact {
         align-self: center;
-        color: $white;
+        color: var(--white);
         padding: 15px;
         background: transparent;
-        border: 1px solid $white;
+        border: 1px solid var(--white);
         text-align: center;
         width: 100%;
 
-        &:visited { color: $white; }
+        &:visited { color: var(--white); }
         &.active {
           background: transparent;
-          border: 1px solid $white;
+          border: 1px solid var(--white);
           box-shadow: none;
         }
       }
@@ -259,7 +264,7 @@ header {
 
     .header-navbar__close {
       padding-top: 2vw;
-      color: $white;
+      color: var(--white);
       font-size: 1.5em;
 
       .menu-close-ico { cursor: pointer;}
@@ -280,7 +285,7 @@ header {
         display: block;
         height: 3px;
         width: 23px;
-        background: $white;
+        background: var(--white);
 
         &:before,
         &:after {
@@ -289,7 +294,7 @@ header {
           display: block;
           height: 100%;
           width: 100%;
-          background: $white;
+          background: var(--white);
         }
 
         &:before { top: 10px; }
@@ -311,7 +316,7 @@ header {
       min-height: calc(100% + 50px);
       left: 0;
       top: 0;
-      background-color: rgba($white, .1);
+      background-color: rgba(var(--white), .1);
       backdrop-filter: blur(4px);
       z-index: 1;
     }

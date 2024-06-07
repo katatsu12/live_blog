@@ -1,7 +1,8 @@
 .healthcare_hipaa {
   &__main {
-    background: linear-gradient(90deg, $sky-ua 0%, rgba($sky-ua, 0.5) 18.75%, $white 91.14%);
+    background: linear-gradient(90deg, var(--sky-blue-gradient));
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+
     .list-with-images__item {
       align-items: center;
       &-icon img { box-shadow: none; }
@@ -9,7 +10,7 @@
   }
 
   &__case_study {
-    background: linear-gradient(180deg, $white 25.64%, $palianytsia 100%);
+    background: linear-gradient(180deg, var(--white) 25.64%, $palianytsia 100%);
     box-shadow: 0px 4px 25px 0px rgba($purple-heart, .25);
   }
   .solutions_cases__case_study_image img { transform: matrix(-1, 0, 0, 1, 0, 0); }
@@ -37,7 +38,7 @@
 @media screen and (max-width: 767px) {
   .healthcare_hipaa {
     &__main {
-      background: linear-gradient($sky-ua, rgba($sky-ua, .5), $white);
+      background: linear-gradient(var(--sky-blue-gradient));
     }
 
     .solutions_cases__case_study {

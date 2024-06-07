@@ -77,7 +77,8 @@
       &.bold {
         color: $black;
         font-family: 'FixelText-Medium';
-        &:hover { color: $main-violet; }
+
+        &:hover { color: var(--footer-hover); }
       }
     }
 
@@ -85,7 +86,7 @@
       color: rgba($black, .8);
       text-decoration: none;
 
-      &:hover { color: $main-violet; }
+      &:hover { color: var(--footer-hover); }
     }
 
     &-copyright {
@@ -118,6 +119,7 @@
     justify-content: space-between;
     padding: 7vh 20% 4vh 20%;
     background: $azovstal;
+    filter: var(--filter-invert);
 
     &__container {
       display: flex;

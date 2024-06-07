@@ -23,10 +23,9 @@
   }
 
   &__main {
-    background-image: linear-gradient($sky-ua, transparent);
+    background-image: linear-gradient(var(--sky-blue), transparent);
 
     .list-with-images.horizontal {
-
       .list-with-images__item {
         max-width: 23%;
 
@@ -58,7 +57,7 @@
   }
 
   &__dedicated_model {
-    background-image: linear-gradient(30deg, #C685D7 0%, $white 82%);
+    background-image: linear-gradient(30deg, #C685D7 0%, var(--white) 82%);
     box-shadow: inset 0px 12px 15px -7px rgba($purple-heart, 0.25), 0 4px 4px 0 rgba(0, 0, 0, .25);
 
     &_description {
@@ -119,17 +118,22 @@
   }
 
   &__transparency {
-    background-image: linear-gradient(165deg, $purple-heart, $sky-ua);
+    background-image: linear-gradient(165deg, $purple-heart, var(--sky-blue));
     box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, .25);
+
+    .white-text { color: var(--white) !important; }
   }
 
   &__services {
-    background-image: linear-gradient($white, $sky-ua);
+    background-image: linear-gradient(var(--white), var(--sky-blue));
     box-shadow: 0 4px 25px 0 rgba($purple-heart, .25);
 
     .button {
       margin-top: 8vh;
-      background-color: $white;
+      color: $black;
+      background-color: var(--transparent-dark-btn);
+
+      &:hover { color: $main-violet; }
     }
   }
 

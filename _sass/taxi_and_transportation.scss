@@ -34,40 +34,62 @@
   }
 
   &__expertise {
-    background-image: linear-gradient(135deg, $buzok, $purple-heart);
+    background-image: linear-gradient(135deg, var(--buzok-liberty), $purple-heart);
+
+    .white-text {color: var(--white) !important; }
   }
 
   &__solutions {
-    background-image: linear-gradient(-67deg, $buzok, $white, $white);
+    background-image: linear-gradient(-67deg, var(--buzok-liberty), var(--white), var(--white));
     box-shadow: 0px 0px 25px 4px rgba($moon_raker, .35);
 
     .list-with-images {
       &__item_element::before { border: 1px solid $buzok; }
     }
+
+    .purple-text { color: var(--purple-violet); }
+
+    .message:not(.purple-text),
+    .description:not(.purple-text) { color: var(--body-color); }
   }
 
   &__security {
     background-color: rgba($purple-heart, .6);
     box-shadow: 0px 0px 25px 4px rgba($black, .2 );
+    filter: var(--filter-invert);
   }
 
   &__cross_platform_app {
     background-image: linear-gradient(35deg, $kviten, $titan_white, $titan_white);
     box-shadow: 0px 0px 25px 4px rgba($moon_raker, .35);
+    filter: var(--filter-invert);
+
     .purple-text { color: $main-violet; }
     .list-with-images__item_element::before { border: 1px solid $main-violet; }
+
+    .message,
+    .description,
+    .block-sub-title { color: $black; }
   }
 
   &__admin_panel {
-    background-image: linear-gradient(35deg, $buzok, $kviten);
+    background-image: linear-gradient(var(--buzok-kviten-darker-gradient));
     box-shadow: inset 0px 0px 25px 4px rgba($purple-heart, .4);
 
     .button {
       background-color: $white;
       font-weight: 400;
       margin-top: 20px;
+      color: $black;
+
       &:hover { color: $main-violet !important; }
     }
+
+    .message,
+    .description { color: var(--body-color); }
+
+    .white-text { color: var(--white) !important; }
+
     .list-with-images__item_element::before { border: 1px solid $purple-heart; }
   }
 }

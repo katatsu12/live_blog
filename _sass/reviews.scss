@@ -3,6 +3,8 @@
     background: center/cover no-repeat url('/assets/images/reviews/reviews-main-bg.webp');
     background-color: $black_sea;
     height: 100%;
+
+    .white-text { color: var(--white) !important; }
   }
 
   &__awards {
@@ -16,17 +18,18 @@
   }
 
   &__testimonials-container {
+    background: var(--transparent-gradient-dark);
+
     .wrapper {
       background: left 0 top 60% no-repeat url("/assets/images/about/benefits.svg");
       position: relative;
 
       .overlay {
         position: absolute;
-        width: 100%;
+        width: 100vw;
         height: 70%;
         right: 0;
         top: 10%;
-        background-color: rgba(252, 252, 252, 0.7);
         backdrop-filter: blur(1.5px);
       }
     }
@@ -52,18 +55,25 @@
     &__item { &-text { margin: 12px 63px 8px 63px; } }
   }
   &__solutions { background: $main-gradient; }
+
   &__expertise { background: none; }
 
   &__tell-us {
     background: left 0 top 100% no-repeat url('/assets/images/contacts/BGT-1x1-1.webp');
     background-size: cover;
+    filter: var(--filter-invert);
 
     .button {
       background: $main-gradient;
       padding: 25px;
       width: 50%;
     }
+
+    .message,
+    .description { color: $black; }
   }
+
+  #team_expertise_button:hover { color: $main-violet; }
 }
 
 @media (max-width: 767px) {

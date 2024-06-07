@@ -1,16 +1,43 @@
 .expertise {
+  .message,
+  .description { color: var(--body-color); }
+
   &__technologies {
-    background: center/cover no-repeat url('/assets/images/expertise/technologies-bg.webp');
-    box-shadow: 0px 0px 20px -3px grey;;
+    background: var(--technologies);
+    box-shadow: 0px 0px 20px -3px grey;
     img { margin: 5vh 0; }
   }
+
   &__solutions { .button { margin-top: 30px; } }
-  &__testimonials { background: center/cover no-repeat url('/assets/images/about/about-bg.webp'); }
+  &__testimonials {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: center/cover no-repeat url('/assets/images/about/about-bg.webp');
+      filter: var(--filter-invert);
+      z-index: -1;
+    }
+
+    .button {
+      background-color: var(--transparent-dark-btn);
+      color: $black;
+
+      &:hover { color: $main-violet; }
+    }
+  }
 
   &__tell-us {
     min-height: 85vh;
     background: center/cover no-repeat url('/assets/images/expertise/tell-us.webp');
     background-color: $dark-violet;
+
+    .white-text:not(.button) { color: var(--white) !important; }
   }
 }
 
@@ -19,8 +46,8 @@
   margin: 6vh 0;
   padding: 6vh 6vw;
   border-radius: 20px;
-  background: $white;
-  box-shadow: $main-shadow;
+  background: var(--white);
+  box-shadow: var(--main-shadow);
 
   .chart-bar {
     display: flex;
@@ -56,6 +83,7 @@
       }
 
       &-asterisk {
+        color: var(--black);
         margin-left: 2vw;
         margin-top: 2vh;
         display: flex;
@@ -77,6 +105,7 @@
       &:nth-child(2n) { justify-content: flex-end; }
     }
   }
+
   .button { margin-top: 6vh; }
 
   .pie-chart {
@@ -112,6 +141,13 @@
         left: 31%;
       }
     }
+  }
+
+  #about-chart-container-button {
+    background-color: var(--transparent-dark-btn);
+    color: $black !important;
+
+    &:hover { color: $main-violet !important; }
   }
 }
 
