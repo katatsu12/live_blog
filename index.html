@@ -132,9 +132,7 @@ json-ld: home
       <p class="description">{{ site.data.index.help_businesses }}</p>
     </div>
     <div class="carousel-scroll" >
-      <div class="carousel-scroll__scroller" data-scroll="scroller">
-        <div class="frame"></div>
-        <div class="frame"></div>
+      <div class="carousel-scroll__scroller" data-scroll="scroller" onscroll="loop(event)">
         {% for item in site.data.index.solutions %}
           <div class="carousel-scroll__item" data-scroll="item">
             <div class="carousel-scroll__animate-visibility animate-visibility with-opacity">
@@ -146,8 +144,6 @@ json-ld: home
             </div>
           </div>
         {% endfor %}
-        <div class="frame"></div>
-        <div class="frame"></div>
       </div>
       <div class="magnifying-overlay"></div>
     </div>
